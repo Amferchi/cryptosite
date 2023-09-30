@@ -1,0 +1,41 @@
+.login-form{
+    margin-top: 40px;
+    width:310px;
+}
+
+.login-btn{
+    background-color: rgb(44, 103, 192);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5px;
+}
+
+.login-btn:hover{
+    background-color: aqua;
+}
+
+.bg-color{
+    background-color:aquamarine;
+}
+
+.lab-log{
+    margin-top: 5px;
+    padding-right: 100%;
+    white-space: nowrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-sm{
+    padding-right: 100%;
+    white-space: nowrap;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sub-head-2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sub-head-1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

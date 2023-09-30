@@ -1,0 +1,28 @@
+<%-include("./partials/top.ejs")%>
+ 
+ <div class="container">
+    <table class="depo-table">
+   <thead>
+        <tr>
+     <th class="th-depo">Amount</th>
+     <th class="th-depo">Status</th>
+     <th class="th-depo">transaction Id</th>
+     <th class="th-depo">Email</th>
+     <th class="th-depo">date</th>
+       </tr>
+  </thead>
+      <tbody>
+  <%investments.forEach(function(investment){%>
+     <tr>
+  <td class="td-depo"><%=investment.amount%></td>
+  <td class="td-depo"><%=investment.plan%></td>
+  <td class="td-depo"><%=investment.profit%></td>
+  <td class="td-depo"><%=investment.date.toDateString()%></td>
+    </tr>
+  <%})%>
+     </tbody>
+    </table>
+
+ </div>
+
+ <%-include("./partials/down.ejs")%>

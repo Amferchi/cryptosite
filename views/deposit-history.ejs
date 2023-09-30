@@ -1,0 +1,40 @@
+<%-include("./partials/top.ejs")%>
+ 
+ <div class="container">
+    <table class="depo-table">
+   <thead>
+        <tr>
+     <th class="th-depo">Amount</th>
+     <th class="th-depo">Status</th>
+     <th class="th-depo">transaction Id</th>
+     <th class="th-depo">Email</th>
+     <th class="th-depo">date</th>
+       </tr>
+  </thead>
+      <tbody>
+  <%deposits.forEach(function(deposit){%>
+     <tr>
+  <td class="td-depo"><%=deposit.amount%></td>
+  <td class="td-depo"><%=deposit.status%></td>
+  <td class="td-depo"><%=deposit.transId%></td>
+  <td class="td-depo"><%=deposit.email%></td>
+  <td class="td-depo"><%=deposit.date.toDateString()%></td>
+    </tr>
+  <%})%>
+     </tbody>
+    </table>
+
+ </div>
+
+ <style>
+.th-depo{
+   margin-right:90%;
+}
+
+.td-depo{
+   margin-right:90%;
+}
+
+ </style>
+
+ <%-include("./partials/down.ejs")%>

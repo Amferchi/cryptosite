@@ -1,0 +1,28 @@
+<%-include("./partials/admin-top.ejs")%>
+
+<div class="container">
+    <table class="center">
+     <thead>
+     <tr>
+   <th>Fullname</th>
+   <th>Username</th>
+   <th>Email</th>
+   <th>Balance</th>
+  
+     </tr>
+    </thead>
+  
+    <tbody>
+      <%users.forEach(function(User){%>
+      <tr>
+   <td><%=User.fullname%></td>
+   <td><%=User.username%></td>
+   <td><%=User.email%></td>
+   <td><%=User.balance%></td>
+      </tr>
+      <%})%>
+    </tbody>
+     </table>
+   </div>
+
+<%-include("./partials/admin-foot.ejs")%>

@@ -1,0 +1,34 @@
+<%-include("./partials/admin-top.ejs")%>
+
+<div class="container">
+    <h3 class="text-center">Pending deposits</h3>
+  <table class="center table-responsive">
+   <thead>
+   <tr>
+ <th>Fullname</th>
+ <th>Email</th>
+ <th>amount</th>
+ <th>transaction ID</th>
+ <th>date</th>
+ <th>action</th>
+   </tr>
+  </thead>
+
+  <tbody>
+    <%deposits.forEach(function(depo){%>
+    <tr>
+ <td><%=depo.fullname%></td>
+ <td><%=depo.email%></td>
+ <td><%=depo.amount%></td>
+ <td><%=depo.transId%></td>
+ <td><%=depo.date.toDateString()%></td>
+ <form action="/admin/<%=depo._id%>/confirm-deposit" method="post">
+  <td><button id="confirm-depo-btn btn btn-danger">Confirm</button></td>  
+ </form>
+    </tr>
+    <%})%>
+  </tbody>
+   </table>
+ </div>
+
+<%-include("./partials/admin-foot.ejs")%>

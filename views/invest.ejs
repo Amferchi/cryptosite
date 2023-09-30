@@ -1,0 +1,35 @@
+<%-include("./partials/top.ejs")%>
+
+<div class="container">
+    <div class="container">
+        <center>
+       <form class="depo-form" action="/new/invest" method="post">
+        <label class="lab-log">Select investment plan</label>
+        <input type="text" name="planName" class="form-control">
+        <label class="lab-log">Amount</label>
+        <input type="number" name="amount" class="form-control">
+        <button type="submit" class="form-control btn btn-danger">invest</button>
+       </form>
+    </center>
+    </div>
+</div>
+
+<style>
+   
+    .depo-form{
+      width:400px
+    }
+    
+    .depo-btn{
+        display: flex;
+        padding-top:5px;
+        background-color:rgb(98, 0, 255);
+    }
+    
+    .depo-btn:hover{
+        background-color: rgb(180, 174, 83)
+    }
+    
+    </style>
+
+<%-include("./partials/down.ejs")%>

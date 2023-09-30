@@ -1,0 +1,20 @@
+<%-include("partials/header.ejs")%>
+    <div class="container">
+      <center>
+        <h1 class="sub-head-2">Login to your account</h1>
+      <div class="login-form">
+         <form action="/login" method="post">
+            <label class="lab-log" for="userlog">username</label>
+            <input class="form-control login-inp" id="userlog" type="text" name="username" required>
+            <label class="lab-log" for="passlog">Password</label>
+            <input class="form-control login-inp" id="passlog" type="password" name="password" required>
+            <button class="login-btn form-control">Login</button>
+         </form>
+         <p class="text-sm">don't have an account?. <span id="regLog"><a href="/register">Register</a></span></p>
+      </div>
+    </center>
+    </div>
+
+
+
+<%-include("partials/footer.ejs")%>

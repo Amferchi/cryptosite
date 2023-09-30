@@ -1,0 +1,40 @@
+<%-include("./partials/top.ejs")%>
+
+<div class="container">
+    <center>
+   <form class="depo-form" action="/deposit" method="post">
+    <label class="lab-log">Payment method</label>
+    <select class="form-control">
+        <option value="">Select deposit method</option>
+        <option value="BTC">bitcoin</option>
+        <option value="USDT">USDT</option>
+        <option value="LTC">litecoin</option>
+    </select>
+    <label class="lab-log">email</label>
+    <input type="text" value ="<%=user.email%>" name="email" class="form-control">
+    <label class="lab-log">Amount</label>
+    <input type="text" name="amount" class="form-control">
+    <button type="submit" class="form-control btn btn-danger ">Deposit</button>
+   </form>
+</center>
+</div>
+
+<style>
+   
+.depo-form{
+  width:400px
+}
+
+.depo-btn{
+    display: flex;
+    padding-top:5px;
+    background-color:rgb(98, 0, 255);
+}
+
+.depo-btn:hover{
+    background-color: rgb(180, 174, 83)
+}
+
+</style>
+
+<%-include("./partials/down.ejs")%>
